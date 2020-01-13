@@ -1,0 +1,13 @@
+!ssh config
+hostname <name>
+ip donamin-name <domain.name>
+username <useranem> privilage 15 secret <password>
+crypto key generate Rsa
+<1024>
+ip ssh version 2
+
+!restconf config
+restconf
+ip http server 
+ip http authentication local
+ip http secure-server

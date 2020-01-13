@@ -1,0 +1,4 @@
+curl --location --request GET 'https://172.16.1.11:443/restconf/data/ietf-interfaces:interfaces/' \
+--header 'Accept: application/yang-data+json' \
+--header 'Content-Type: application/yang-data+json' \
+--header 'Authorization: Basic dXJpZWw6Y2lzY28xMjM=' 
