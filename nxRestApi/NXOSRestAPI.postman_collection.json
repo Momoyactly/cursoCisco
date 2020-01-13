@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "a3be6454-e5cf-4db0-8a24-5d0f82227d38",
+		"name": "NXOS Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NXOS Rest Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d0d22698-adcf-4ff6-881c-e350b3c049a9",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.environment.set(\"token\",jsonData.imdata[0].aaaLogin.attributes.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"aaaUser\":{\n\t\t\"attributes\":{\n\t\t\t\"name\": \"{{user}}\",\n\t\t\t\"pwd\": \"{{pass}}\"\n\t\t}\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://{{url}}/api/aaaLogin.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"aaaLogin.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all vlans",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}/api/node/class/l2BD.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"node",
+						"class",
+						"l2BD.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get interface",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}/api/mo/sys/intf/phys-[eth1/97].json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"intf",
+						"phys-[eth1",
+						"97].json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change description  interface",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"l1PhysIf\": {\n                \"attributes\": {\n\t\t\t\t\t\"descr\":\"Uriel wuz here\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/mo/sys/intf/phys-[eth1/97].json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"intf",
+						"phys-[eth1",
+						"97].json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
