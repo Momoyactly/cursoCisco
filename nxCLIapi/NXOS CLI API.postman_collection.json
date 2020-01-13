@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "e1dd101f-0951-4681-978e-42e0b13266de",
+		"name": "NXOS CLI API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NX_API Get",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ins_api\": {\n    \"version\": \"1.2\",\n    \"type\": \"cli_show\",\n    \"chunk\": \"0\",\n    \"sid\": \"1\",\n    \"input\": \"sh ip int brief\",\n    \"output_format\": \"json\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://{{url}}/ins",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ins"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{pass}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{user}}",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}
