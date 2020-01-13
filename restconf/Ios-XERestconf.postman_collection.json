@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "d5c63ad0-0a3b-4f00-8be2-80ee2a5f1810",
+		"name": "Ios-XE Restconf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IETF Yang Specific Interfaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}:{{port}}/restconf/data/ietf-interfaces:interfaces/",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Netconf state capabilities",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}:{{port}}/restconf/data/netconf-state/capabilities",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"restconf",
+						"data",
+						"netconf-state",
+						"capabilities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cisco Yang Interfaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}:{{port}}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-interfaces-oper:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IETF Yang Specific Interfaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}:{{port}}/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet2",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces",
+						"interface=GigabitEthernet2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cisco Yang Specific Interfaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}:{{port}}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface=GigabitEthernet2",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-interfaces-oper:interfaces",
+						"interface=GigabitEthernet2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cisco Yang Specific name Interface",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}:{{port}}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface=GigabitEthernet2/name",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-interfaces-oper:interfaces",
+						"interface=GigabitEthernet2",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IETF Yang Create Lo100",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ietf-interfaces:interface\":{\n\t\t\"name\":\"Loopback100\",\n\t\t\"description\":\"Created with Restconf\",\n\t\t\"type\":\"iana-if-type:softwareLoopback\",\n\t\t\"enabled\":true,\n\t\t\"ietf-ip:ipv4\":{\n\t\t\t\"address\":[\n\t\t\t\t{\n\t\t\t\t\t\"ip\":\"172.16.100.1\",\n\t\t\t\t\t\"netmask\":\"255.255.255.0\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://{{url}}:{{port}}/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IETF Yang Delete Lo100",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ietf-interfaces:interface\":{\n\t\t\"name\":\"Loopback100\",\n\t\t\"description\":\"Created with Restconf\",\n\t\t\"type\":\"iana-if-type:softwareLoopback\",\n\t\t\"enabled\":true,\n\t\t\"ietf-ip:ipv4\":{\n\t\t\t\"address\":[\n\t\t\t\t{\n\t\t\t\t\t\"ip\":\"172.16.100.1\",\n\t\t\t\t\t\"netmask\":\"255.255.255.0\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://{{url}}:{{port}}/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{user}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "c3947b41-3a0e-4757-b934-213e8e835ec3",
+			"key": "url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "525ccef7-b37c-4fd3-a4df-a3f5b14e587c",
+			"key": "port",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
