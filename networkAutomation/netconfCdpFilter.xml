@@ -1,8 +1,8 @@
 
 <filter>
-    <interfaces xmlns="urn:ietf:params:xml:ns:yang:smiv2:CISCO-CDP-MIB">
-        <interface>
-            <name>GigabitEthernet2</name>
-        </interface>
-    </interfaces>
+    <cdpInterfaceExtTable xmlns="urn:ietf:params:xml:ns:yang:smiv2:CISCO-CDP-MIB">
+        <cdpInterfaceExtEntry>
+            <ifIndex>GigabitEthernet2</ifIndex>
+        </cdpInterfaceExtEntry>
+    </cdpInterfaceExtTable>
 </filter>
