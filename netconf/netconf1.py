@@ -6,4 +6,5 @@ with manager.connect(host="172.16.1.11",
                     password="cisco123", 
                     hostkey_verify=False) as m:
     for capacidad in m.server_capabilities:
+        print("*"*5)
         print(capacidad)

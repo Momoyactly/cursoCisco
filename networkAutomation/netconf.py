@@ -12,7 +12,7 @@ with manager.connect(host=router["host"],
                     hostkey_verify=False) as m:
     interface_netconf = m.get(netconf_filter)
     interfaceDict = xmltodict.parse(interface_netconf.xml)
-    print(interfaceDict)
+    print(interfaceDict["rpc-reply"]["data"])
     """
     nombre = interfaceDict["interfaces"]["interface"]["name"]["#text"]
     config = interfaceDict["interfaces"]
