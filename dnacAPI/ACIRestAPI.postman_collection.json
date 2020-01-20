@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "7494488f-3811-4b14-bf17-10cba570d0c0",
+		"name": "ACIRestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login AAA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41a53141-5b01-4d5b-b01f-508de07f4661",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.environment.set(\"token\",jsonData.imdata[0].aaaLogin.attributes.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"aaaUser\": {\n        \"attributes\": {\n            \"name\": \"{{user}}\",\n            \"pwd\": \"{{pass}}\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/aaaLogin.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"aaaLogin.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get APPs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41a53141-5b01-4d5b-b01f-508de07f4661",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/class/fvAp.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"fvAp.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tenant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41a53141-5b01-4d5b-b01f-508de07f4661",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fvTenant\" : {\n    \"attributes\" : {\n      \"name\" : \"Uriel-lab\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/mo/uni.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Tenant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41a53141-5b01-4d5b-b01f-508de07f4661",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/node/mo/uni/tn-Uriel-lab.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"node",
+						"mo",
+						"uni",
+						"tn-Uriel-lab.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Childrens",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41a53141-5b01-4d5b-b01f-508de07f4661",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/node/mo/uni/tn-Uriel-lab.json?query-target=children",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"node",
+						"mo",
+						"uni",
+						"tn-Uriel-lab.json"
+					],
+					"query": [
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create App",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41a53141-5b01-4d5b-b01f-508de07f4661",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fvAp\" : {\n    \"attributes\" : {\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/mo/uni/tn-Uriel-lab/ap-Prueba.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Uriel-lab",
+						"ap-Prueba.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get App",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41a53141-5b01-4d5b-b01f-508de07f4661",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/mo/uni/tn-Uriel-lab/ap-Prueba.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Uriel-lab",
+						"ap-Prueba.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update App",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41a53141-5b01-4d5b-b01f-508de07f4661",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fvAp\": {\n                \"attributes\": {\n                    \"descr\": \"Uriel wuz here from postman\",\n                    \"dn\": \"uni/tn-Uriel-lab/ap-Prueba\"\n                \t\n                }\n\t\t\t}\n}               \n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/mo/uni/tn-Uriel-lab/ap-Prueba.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Uriel-lab",
+						"ap-Prueba.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Tenant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41a53141-5b01-4d5b-b01f-508de07f4661",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/api/mo/uni/tn-Uriel-lab.json",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Uriel-lab.json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
