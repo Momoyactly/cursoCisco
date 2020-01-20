@@ -1,8 +1,5 @@
+
 <filter>
     <cdp-neighbor-details xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-cdp-oper">
-         <cdp-neighbor-detail>
-            <device-id>NX9k(9DMGCBLLV4X)</device-id>
-        </cdp-neighbor-detail>
     </cdp-neighbor-details>
 </filter>
-
