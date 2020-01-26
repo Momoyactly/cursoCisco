@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "26e6ec0f-a78e-4d09-9d19-5181d3d81f5f",
+		"name": "CUCM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "appication/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}/cucm-uds/users",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cucm-uds",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specific user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "appication/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{url}}/cucm-uds/user/user01/devices",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cucm-uds",
+						"user",
+						"user01",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{pass}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{user}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1e6f4cf7-aaa5-4a7e-9814-213c5bad0ad9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6e7a9b80-4794-4bd5-856d-8a024b096f7c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
