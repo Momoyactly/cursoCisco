@@ -11,11 +11,16 @@ class MVC():
     def modelo(self):
         infoPersonaje = requests.get(self.swUrl+self.numPersonaje).json()
         return infoPersonaje["name"]
+    def controlador(self):
+        pass
+    def vista(self):
+        pass
 
 
     
 
 class MVC_Prueba(unittest.TestCase):
+    
     def test_is_a_Class(self):
         self.assertIsInstance(type(MVC),type(MVC_Prueba))
     def test_model(self):
@@ -31,6 +36,11 @@ class MVC_Prueba(unittest.TestCase):
         self.assertEqual(lukeXML[0].text  ,"Luke Skywalker")
         self.assertEqual(C_3P0_XML[0].text,"C-3PO")
     def test_vista(self):
-        pass
+        luke  = MVC(1)
+        C_3P0 = MVC(2)
+        self.assertEqual(luke.vista(),200)
+        self.assertEqual(C_3P0.vista(),200)
+
+        
 
 unittest.main()
