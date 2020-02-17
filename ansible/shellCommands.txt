@@ -1,0 +1,10 @@
+
+ansible all - ping 
+
+ansible -m raw -a "/usr/bin/uptime" PIs
+
+ansible -m shell -a "python3 -V" PIs
+
+ansible -m raw -a "whoami" PIs
+
+ansible -m raw -b -a "whoami" PIs
