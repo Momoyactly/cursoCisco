@@ -1,5 +1,5 @@
 
-ansible all - ping 
+ansible all -m ping 
 
 ansible -m raw -a "/usr/bin/uptime" PIs
 
