@@ -1,0 +1,7 @@
+---
+    - name: Retrieve facts from Sandbox servers
+      hosts: PIs
+  
+      tasks:
+        - name: "Hi! Here is my hostname:"
+          debug: msg="{{ansible_hostname}}"
